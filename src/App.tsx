@@ -119,7 +119,7 @@ function App() {
           <PerspectiveCamera makeDefault position={[0, 2, 8]} fov={35} />
           <Suspense fallback={null}>
             <SceneContent accepted={accepted} />
-            <EffectComposer disableNormalPass>
+            <EffectComposer>
               <Bloom luminanceThreshold={1} intensity={1.5} levels={9} mipmapBlur />
               <Noise opacity={0.04} />
               <Vignette eskil={false} offset={0.1} darkness={1.2} />
