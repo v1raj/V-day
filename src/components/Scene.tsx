@@ -73,7 +73,7 @@ export function BackgroundHearts() {
     return temp
   }, [count])
 
-  useFrame((state) => {
+  useFrame(() => {
     particles.forEach((particle, i) => {
       let { t, factor, speed, xFactor, yFactor, zFactor } = particle
       particle.t += speed
@@ -101,7 +101,7 @@ export function BackgroundHearts() {
 }
 
 // Re-export the original scene content
-export function SceneContent({ accepted }: { accepted: boolean }) { // Keep accepted prop to avoid breaking App.tsx but ignore it or use it simply
+export function SceneContent({ }: { accepted: boolean }) { // Keep accepted prop to avoid breaking App.tsx but ignore it or use it simply
   return (
     <>
       <ambientLight intensity={0.3} />
